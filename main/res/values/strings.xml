@@ -1,0 +1,32 @@
+<resources>
+    //primera pantalla
+    <string name="app_name">Practica1</string>
+    <string name="encabe">Bienvenido a esta aplicación</string>
+    <string name="btnform">FORMULARIO</string>
+    <string name="btnemail">MANDAR EMAIL</string>
+
+    //segunda pantalla
+    <string name="form">Formulario</string>
+    <string name="nomyap">Nombre y apellidos</string>
+    <string name="text1">Escribe algo..</string>
+    <string name="dni">DNI</string>                     //para dni castear un caracter a int y budscar su codigo ascii
+    <string name="text2">Escribe algo..</string>
+    <string name="nacion">Nacionalidad</string>
+    <string-array name="pais">
+        <item>Español</item>
+        <item>Argentino</item>
+        <item>Peruano</item>
+        <item>Islandés</item>
+        <item>Sueco</item>
+    </string-array>
+    <string name="email">Correo Electrónico</string>
+    <string name="text3">Escribe algo..</string>
+    <string name="noti">Suscribirse al boletín de noticias</string>
+    <string name="chek"></string>
+    <string name="envform">ENVIAR</string>
+
+    //tercera pantalla
+    <string name="envi">Envio completado</string>
+
+
+</resources>

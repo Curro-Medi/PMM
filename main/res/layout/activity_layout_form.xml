@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/form"
+        android:textSize="30dp"
+
+
+        />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/nomyap"
+        android:textSize="13dp"
+
+        />
+
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/text1"
+        android:id="@+id/textnom"
+        android:textSize="15dp"
+
+        />
+
+    <TextView
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/dni"
+        android:textSize="13dp"
+
+        />
+
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:hint="@string/text2"
+        android:id="@+id/textdni"
+        android:textSize="15dp"
+
+        />
+
+    <TextView
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/nacion"
+        android:textSize="13dp"
+
+        />
+
+
+    <Spinner
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:entries="@array/pais"
+        android:id="@+id/paises"
+        android:orientation="vertical"
+        android:textSize="20dp"
+
+        />
+
+
+    <TextView
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/email"
+        android:textSize="13dp"
+
+        />
+
+
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:hint="@string/text3"
+        android:id="@+id/textcorreo"
+        android:textSize="15dp"
+
+        />
+
+    <TextView
+
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:text="@string/noti"
+        android:textSize="13dp"
+
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="205dp"
+        android:layout_marginTop="-33dp"
+        android:orientation="horizontal"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:text="@string/chek"
+        android:id="@+id/box"
+
+        />
+
+
+    <Button
+
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="0dp"
+        android:text="@string/envform"
+        android:id="@+id/envform"
+        android:textSize="13dp"
+        android:background="@color/colorPrimary"
+
+
+        />
+</LinearLayout>
