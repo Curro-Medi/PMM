@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Practica3</string>
+    <string name="tit">Bienvenidos a la practica3</string>
+    <string name="btnHTTP">Descargar XML</string>
+    <string name="btnXML">XML HTTP</string>
+    <string name="btnImage">Descargar Imagen</string>
+    <string name="permisos"></string>
+    <string name="titxml">Entradas StackOverFlow</string>
+    <string name="btndescargaXML">Descargar XML</string>
+
+</resources>
