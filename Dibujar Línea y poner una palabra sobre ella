@@ -1,0 +1,48 @@
+package com.example.paintapp;
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+       setContentView(new VistaPropia(this));
+   }
+
+   private class VistaPropia extends View {
+       public VistaPropia(Context context){
+           super(context);
+       }
+       @Override
+       protected void onDraw(Canvas canvas){
+
+           Paint pincel = new Paint();
+           pincel.setColor(Color.MAGENTA);
+           pincel.setStrokeWidth(4);
+           pincel.setStyle(Paint.Style.STROKE);
+           pincel.setTextSize(90);
+
+           Path trazo = new Path();
+           trazo.moveTo(100, 100);
+           trazo.quadTo(220,430, 175,252);
+           trazo.cubicTo(329,311,653,389, 406,823);
+           trazo.lineTo(973,917);
+
+           canvas.drawColor(Color.WHITE);
+           canvas.drawPath(trazo,pincel);
+
+           pincel.setColor(Color.GREEN);
+           canvas.drawTextOnPath("Curro ", trazo, 500, -40, pincel);
+
+       }
+   }
+}
