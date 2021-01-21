@@ -1,0 +1,52 @@
+package com.example.paintapp;
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Point;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.view.Display;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+   float ww = 0;
+   float hh = 0;
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+       setContentView(new VistaPropia(this));
+   }
+   private class VistaPropia extends View {
+       public VistaPropia(Context context){
+           super(context);
+       }
+       @Override
+       protected void onSizeChanged(int w, int h, int oldw, int oldh){
+
+           float xpad = (float)(getPaddingLeft() + getPaddingRight());
+           float ypad = (float)(getPaddingTop() + getPaddingBottom());
+           ww = (float)w - xpad; // máximo de ancho
+           hh = (float)h - ypad; // máximo de alto
+           float diameter = Math.min(ww, hh);
+       }
+
+       @Override
+       protected void onDraw(Canvas canvas){
+           Path trazo = new Path();
+           trazo.addCircle(ww/2, hh/2, ww/2, Path.Direction.CCW);
+           canvas.drawColor(Color.WHITE);
+           Paint pincel = new Paint();
+           pincel.setColor(Color.GRAY);
+           pincel.setStrokeWidth(8);
+           canvas.drawPath(trazo, pincel);
+           pincel.setStrokeWidth(1);
+           pincel.setTypeface(Typeface.SANS_SERIF);
+       }
+   }
+}
+
