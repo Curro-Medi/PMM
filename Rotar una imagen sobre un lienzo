@@ -1,0 +1,50 @@
+
+package com.example.paintapp;
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Point;
+import android.graphics.Typeface;
+import android.media.Image;
+import android.os.Bundle;
+import android.view.Display;
+import android.view.View;
+import android.widget.ImageView;
+
+public class MainActivity extends AppCompatActivity {
+   private Bitmap miBitmap;
+   private ImageView IM;
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(new VistaPropia(this));
+       miBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.descarga);
+   }
+
+   private class VistaPropia extends View {
+       public VistaPropia(Context context){
+           super(context);
+       }
+
+       @Override
+       protected void onDraw(Canvas canvas){
+           Paint pincel = new Paint();
+           pincel.setColor(Color.GRAY);
+           pincel.setStrokeWidth(8);
+           pincel.setStrokeWidth(1);
+           pincel.setTypeface(Typeface.SANS_SERIF);
+           miBitmap = Bitmap.createScaledBitmap(miBitmap, 730, 730, true);
+           Matrix miMat = new Matrix();
+           miMat.postRotate(30);
+           canvas.setMatrix(miMat);
+           canvas.drawBitmap(miBitmap,550,50,pincel);
+       }
+   }
+}
